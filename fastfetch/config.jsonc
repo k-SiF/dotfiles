@@ -1,0 +1,155 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type":"auto",
+    "source":"~/.dotfiles/fastfetch/parthenon.txt",
+    //"color-1":1,
+    "padding": {
+      "top":4,
+      "right":4,
+      "left":3
+    }
+  },
+  "display": {
+    "color": "38;2;168;147;112",
+    "percent": {
+      "color": {
+        "green":"38;2;122;132;77",
+        "yellow":"38;2;141;108;55",
+        "red":"38;2;107;60;53"
+      }
+    },
+    "separator": " ",
+    "size": {
+            "binaryPrefix": "si"
+    },
+    "constants": [ "◈̲̅Ο̲̅Σ̲̅Π̲̅◈̲̅⟁̳̿⟁̳̿⟁̳̿◈̲̅Ο̲̅Σ̲̅Π̲̅◈̲̅⟁̳̿⟁̳̿⟁̳̿⟁̳̿◈̲̅Ο̲̅Σ̲̅Π̲̅◈̲̅⟁̳̿⟁̳̿⟁̳̿◈̲̅Ο̲̅Σ̲̅Π̲̅◈̲̅" ]
+  },
+  "modules": [
+    "break",
+    {
+      "type":"custom",
+      "format":"{$1}"
+    },
+    {  
+      "type":"title",
+      "format":"𐅡--⋄--⟦{host-name-colored}{at-symbol-colored}{user-name-colored}⟧--⋄--𐅡",
+      "keyColor":"38;2;107;60;53",
+      "valueColor":"38;2;107;60;53"
+    },
+    {
+      "type":"custom",
+      "format":"{$1}"
+    },
+    {
+      "type":"os",
+      "key":"║ : ║",
+      "keyColor":"38;2;107;60;53",
+      "valueColor":"38;2;107;60;53",
+      "format":"{name}\t     ║"
+    },
+    {
+      "type":"wm",
+      "key":"║ : ║",
+      "keyColor":"38;2;107;60;53",
+      "format":"{pretty-name}\t\t     ║"
+    },
+    {
+      "type":"terminal",
+      "key":"║ : ║",
+      "keyColor":"38;2;107;60;53",
+      "valueColor":"38;2;107;60;53",
+      "format":"Kitty {version}\t     ║"
+    },
+    {
+      "type":"terminalfont",
+      "key":"║ : ║",
+      "keyColor":"38;2;107;60;53",
+      "valueColor":"38;2;107;60;53",
+      "format":"{name}\t     ║"
+    },
+    {
+      "type":"custom",
+      "format":"{$1}"
+    },
+    {
+      "type":"host",
+      "key":"║ 󰌢: ║",
+      "keyColor":"38;2;107;60;53",
+      "valueColor":"38;2;107;60;53",
+      "format":"{family}\t     ║"
+    },
+    {
+      "type":"display",
+      "key":"║ : ║",
+      "keyColor":"38;2;107;60;53",
+      "valueColor":"38;2;107;60;53",
+      "format": "{width}x{height}@{refresh-rate}Hz\t     ║"
+    },
+    {
+      "type":"cpu",
+      "key":"║ : ║",
+      "keyColor":"38;2;107;60;53",
+      "valueColor":"38;2;107;60;53",
+      "format":"Intel Core i9-14900HX ║"
+    },
+    {
+      "type":"gpu",
+      "key":"║ 󰢮: ║",
+      "keyColor":"38;2;107;60;53",
+      "valueColor":"38;2;107;60;53",
+      "format":"GeForce RTX 4070\t     ║"
+    },
+    {
+      "type":"custom",
+      "format":"{$1}"
+    },
+    {
+      "type":"memory",
+      "key":"║ 󰾲: ║",
+      "keyColor":"38;2;107;60;53",
+      "valueColor":"38;2;107;60;53",
+      "binary":false,
+      "format":"{used}    / {total}\t[{percentage}]║"
+    },
+    {
+      "type":"disk",
+      "key":"║ : ║",
+      "keyColor":"38;2;107;60;53",
+      "valueColor":"38;2;107;60;53",
+      "folders":"/",
+      "format":"{size-used}  / {size-total} [{size-percentage}]║"
+    },
+    {
+      "type":"disk",
+      "key":"║ : ║",
+      "keyColor":"38;2;107;60;53",
+      "valueColor":"38;2;107;60;53",
+      "folders":"/mnt/windows/C",
+      "format":"{size-used}  / {size-total} [{size-percentage}]║"
+    },
+    {
+      "type":"disk",
+      "key":"║ : ║",
+      "keyColor":"38;2;107;60;53",
+      "valueColor":"38;2;107;60;53",
+      "folders":"/mnt/windows/D",
+      "format":"{size-used}  / {size-total}\t[{size-percentage}]║"
+    },
+    {
+      "type":"custom",
+      "format":"{$1}"
+    },
+    "break",
+    {
+      "type":"colors",
+      "symbol":"diamond",
+      "diamond": {
+        "range":"[2, 4]",
+        "width":"2"
+      }
+    },
+    "break",
+    "break"
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "layer": "top",
+  "position": "top",
+  "reload_style_on_change": true,
+  "modules-left": ["custom/icon", "custom/separator2", "clock", "custom/separator1", "tray", "custom/separator1", "cava"],
+  "modules-center": ["custom/cross#left", "custom/fleurcouronne", "custom/cross", "hyprland/workspaces#left", "custom/fleur", "hyprland/workspaces#right", "custom/cross#left", "custom/fleurcouronne", "custom/cross"],
+  "modules-right": ["group/expand", "custom/separator1", "bluetooth", "network", "battery","custom/notification", "custom/separator1",  "custom/power"],
+
+  "cava": {
+        "framerate": 60,
+        "autosens": 1,
+        "sensitivity": 1,
+        "bars": 14,
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+        "tooltip": false,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+                   "on-click-right": "mode"
+                   }
+    },
+  "custom/vine-top": {
+    "format": "❦",
+    "tooltip": false,
+    "class": "vine-decoration"
+  },
+  "hyprland/workspaces#left": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "♦",
+      "default": "♦",
+      "empty": "♢"
+    },
+    "persistent-workspaces": {
+      "*": [1, 2, 3]
+    },
+    "ignore-workspaces": ["4", "5", "6"]
+  },
+
+  "custom/cross": {
+    "format": "𝄂",
+    "tooltip": false
+  },
+  "custom/cross#left": {
+    "format": "𝄃",
+    "tooltip": false
+  },
+
+  "custom/fleur":{
+    "format":"⚜",
+    "tooltip": false
+  },
+
+  "custom/icon": {
+    "format":"O",
+    "tooltip": false
+  },
+
+  "custom/fleurcouronne": {
+    "format":"⋟❧༻❁༺☙⋞",
+    "tooltip": false
+  },
+
+  "hyprland/workspaces#right": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "♦",
+      "default": "♦",
+      "empty": "♢"
+    },
+    "persistent-workspaces": {
+      "*": [4, 5, 6]
+    },
+    "ignore-workspaces": ["1", "2", "3"]
+  },
+
+
+  "custom/notification": {
+    "tooltip": false,
+    "format": "",
+    "on-click": "hyprctl dispatch exec pavucontrol",
+    "escape": true
+  },
+
+"hyprland/window": {
+  "max-length": 10,
+  "tooltip": false
+},
+
+"custom/picker":{
+"format": " ",
+"on-click":"hyprpicker -a"
+},
+
+"custom/separator2": {
+  "format": "≠",
+  "tooltip": false
+},
+
+"custom/separator1": {
+  "format": " ǀ ",
+  "tooltip": false
+},
+
+"custom/image": {
+  "exec": "~/bin/display_img.sh",
+  "interval": 0,
+  "format": " " 
+},
+
+  "clock": {
+    "format": "{:%d⬪%b⬪%Y  ⟦%H:%M⟧}",
+    "interval": 60,
+    "locale": "fr_FR.UTF-8",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color='#fAfBfC'><b>{}</b></span>"
+      }
+    }
+  },
+
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-disconnected": "",
+    "tooltip-format-disconnected": "Error",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} 🖧 ",
+    "on-click": "kitty nmtui"
+  },
+
+  "bluetooth": {
+    "format-on": "󰂯",
+    "format-off": "BT-off",
+    "format-disabled": "󰂲",
+    "format-connected-battery": "{device_battery_percentage}% 󰂯",
+    "format-alt": "{device_alias} 󰂯",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected ",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected \n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
+    "on-click-right": "blueman-manager"
+  },
+
+  "battery": {
+    "interval": 30,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% 󰂄",
+    "format-plugged": "{capacity}% 󰂄 ",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "󰁻",
+      "󰁼",
+      "󰁾",
+      "󰂀",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+
+  "custom/power": {
+  "format": " {}",
+  "tooltip": "Power Menu",
+  "on-click": "systemctl poweroff",
+  "interval": 3600
+},
+
+ "custom/player": {
+  "format": "🎵 {}",
+  "tooltip": "Player",
+  "exec": "playerctl metadata --format '{{ artist }} - {{ title }}'",
+  "interval": 5,
+  "return-type": "text",
+  "on-click": "playerctl play-pause",
+  "on-scroll-up": "playerctl next",
+  "on-scroll-down": "playerctl previous"
+},
+
+  "custom/expand": {
+    "format": "",
+    "tooltip": false
+  },
+
+  "custom/endpoint": {
+    "format": "|",
+    "tooltip": false
+  },
+
+  "group/expand": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 600,
+      "transition-to-left": true,
+      "click-to-reveal": true
+    },
+    "modules": ["custom/expand", "custom/colorpicker", "cpu", "memory", "temperature", "custom/endpoint"]
+  },
+
+  "custom/colorpicker": {
+    "format": " ",
+    "return-type": "json",
+    "interval": "once",
+    "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
+    "on-click": "~/.config/waybar/scripts/colorpicker.sh",
+    "signal": 1
+  },
+
+  "cpu": {
+    "format": "󰻠",
+    "tooltip": true
+  },
+
+  "memory": {
+    "format": ""
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": ""
+  },
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 10
+  }
+}

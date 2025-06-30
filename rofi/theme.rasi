@@ -1,0 +1,131 @@
+/* GLOBAL PROPERTIES */
+
+* {
+    background:                  #0c0c04;
+    background-alt:              #2D1E23;
+    foreground:                  #dcccad;
+    color3:                      #8D6C37;
+    color4:                      #8B7654;
+    color6:                      #A99167;
+    color8:                      #9a8e79;
+    selected:                    #9a8e79;
+    active:                      #2E3F34;
+    urgent:                      #D08261;
+}
+
+configuration {
+    modi:           "drun,filebrowser,window,ssh";
+    font:           "Courier Prime 12";
+    show-icons:     true;
+    display-drun: "";
+    display-run: "";
+    display-window: "";
+    display-filebrowser: "";
+}
+
+window {
+    transparency:     "real";
+    width:			    	40%;
+    height:           55%;
+    padding: 			    0px;
+    location: 			  center;
+}
+
+mainbox {
+    orientation:         horizontal;
+    children:            [ imagebox, rightbox ];
+    border:              1px solid;
+    border-color:        @color4;
+    spacing:             0%;
+    padding:             0px;
+}
+
+textbox-prompt-colon {
+    content:            " ⚜ ";
+    text-color:         @color4;
+    //size:               30px;
+    background-color:   @background;
+    expand:             false;
+    padding:            2px 0px 0px 4px;
+}
+
+prompt { 
+    enabled:            true; 
+    background-color:   @background;
+    text-color:         @color4;
+}
+
+entry {
+    placeholder:			  "";
+    expand:             true;
+    padding:            5px 2% 5px 0.8%;
+    text-color:         inherit;
+    background-color:   inherit;
+    placeholder-color:  @foreground;
+}
+
+inputbar {
+    children:           [ textbox-prompt-colon, prompt, entry ];
+    background-color:   @background;
+    text-color:         @color4;
+    expand:             false;
+    padding:            8px;
+}
+
+listview {  
+    columns:            1;
+    lines:	            8;
+    cycle:              false;
+    dynamic:            true;
+    layout:             vertical;
+    padding:            1.5% 0% 1% 0%;
+    background-color:   @background;
+}
+
+imagebox {
+    background-color:   @background-alt;
+    background-image:   url("~/Images/lady-portrait.png", both);
+    width:              40%;
+    expand:             true;
+    border:             1px solid;
+    border-color:       @color4;
+}
+
+rightbox {
+    orientation:        vertical;
+    children:           [ inputbar, listview ];
+    width:              60%;
+    expand:             true;
+    background-color:   @color4;
+    border:             1px solid;
+    border-color:       @color4;
+}
+
+element {
+    padding:             1% 0% 1% 0%;
+    background-color:    @background;
+    text-color:          @color4;
+}
+
+element-icon {
+    background-color:    inherit;
+    text-color:          inherit;
+    spacing:             0%;
+    padding:             0px 0px 0px 14px;
+    size:                18px;
+    cursor:              inherit;
+}
+
+element-text {
+    expand:              true;
+    vertical-align:      0.5;
+    margin:              0.5% 3% 0% 1%;
+    background-color:    inherit;
+    text-color:          inherit;
+}
+
+element selected {
+    background-color:    @color4;
+    text-color:          @background;
+}
+
